@@ -5,6 +5,5 @@ description: A personal blog and portfolio site powered by Jekyll and GitHub Pag
 baseurl: ""
 url: "https://11huang-crypto.github.io"
 github_username: 11huang-crypto
-theme: minima
 plugins:
   - jekyll-feed

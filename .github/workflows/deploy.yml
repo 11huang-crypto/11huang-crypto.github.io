@@ -2,30 +2,28 @@ name: Deploy Jekyll to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2"
+          ruby-version: 3.2
           bundler-cache: true
 
-      - name: Build with Jekyll
+      - name: Build Jekyll site
         run: bundle exec jekyll build
 
-      - name: Deploy
+      - name: Deploy to Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
+          force_orphan: true
