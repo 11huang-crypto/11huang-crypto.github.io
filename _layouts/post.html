@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="container" style="max-width: 800px; margin: 60px auto;">
+  <article class="post-card" style="padding: 40px;">
+    <p class="post-meta">{{ page.date | date: "%Y年%m月%d日" }}</p>
+    <h1 class="post-title" style="font-size: 2.5rem; margin-bottom: 30px;">{{ page.title }}</h1>
+    <div class="post-content" style="color: var(--text-secondary);">
+      {{ content }}
+    </div>
+  </article>
+</div>

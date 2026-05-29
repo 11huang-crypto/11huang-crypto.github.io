@@ -1,0 +1,10 @@
+# Welcome to Jekyll!
+title: 11huang-crypto
+email: your-email@example.com
+description: A personal blog and portfolio site powered by Jekyll and GitHub Pages.
+baseurl: ""
+url: "https://11huang-crypto.github.io"
+github_username: 11huang-crypto
+theme: minima
+plugins:
+  - jekyll-feed
